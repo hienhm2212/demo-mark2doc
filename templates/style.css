@@ -1,0 +1,15 @@
+body { font-family: Calibri, "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.55; }
+header#title-block-header { border-bottom: 2px solid #F2A541; margin-bottom: 24px; padding-bottom: 12px; }
+h1.title { font-family: Cambria, Georgia, serif; color: #1B1F3B; font-size: 2.2em; margin-bottom: 0; }
+p.subtitle { color: #C97A10; font-size: 1.3em; margin-top: 4px; }
+p.author, p.date { color: #5B6178; margin: 2px 0; }
+h1, h2, h3 { font-family: Cambria, Georgia, serif; color: #1B1F3B; }
+h3 { color: #C97A10; }
+nav#TOC { background: #EEF1F7; padding: 12px 24px; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95em; }
+th { background: #1B1F3B; color: #fff; text-align: left; }
+th, td { border: 1px solid #BFC4D6; padding: 6px 10px; vertical-align: top; }
+tr:nth-child(even) td { background: #F7F8FB; }
+blockquote { border-left: 4px solid #F2A541; background: #FFF6E8; margin: 12px 0; padding: 8px 16px; }
+pre { background: #11142A; color: #E6E8F2; padding: 12px; border-radius: 6px; overflow-x: auto; }
+img { max-width: 100%; }

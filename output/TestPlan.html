@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Team QC – ACME Software" />
+  <title>Test Plan &amp; Test Cases</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body { font-family: Calibri, "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.55; }
+header#title-block-header { border-bottom: 2px solid #F2A541; margin-bottom: 24px; padding-bottom: 12px; }
+h1.title { font-family: Cambria, Georgia, serif; color: #1B1F3B; font-size: 2.2em; margin-bottom: 0; }
+p.subtitle { color: #C97A10; font-size: 1.3em; margin-top: 4px; }
+p.author, p.date { color: #5B6178; margin: 2px 0; }
+h1, h2, h3 { font-family: Cambria, Georgia, serif; color: #1B1F3B; }
+h3 { color: #C97A10; }
+nav#TOC { background: #EEF1F7; padding: 12px 24px; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95em; }
+th { background: #1B1F3B; color: #fff; text-align: left; }
+th, td { border: 1px solid #BFC4D6; padding: 6px 10px; vertical-align: top; }
+tr:nth-child(even) td { background: #F7F8FB; }
+blockquote { border-left: 4px solid #F2A541; background: #FFF6E8; margin: 12px 0; padding: 8px 16px; }
+pre { background: #11142A; color: #E6E8F2; padding: 12px; border-radius: 6px; overflow-x: auto; }
+img { max-width: 100%; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Test Plan &amp; Test Cases</h1>
+<p class="subtitle">Module Thanh toán – Ứng dụng ShopNow</p>
+<p class="author">Team QC – ACME Software</p>
+<p class="date">Phiên bản 1.0 · 28/09/2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Mục lục</h2>
+<ul>
+<li><a href="#thông-tin-chung" id="toc-thông-tin-chung">Thông tin
+chung</a></li>
+<li><a href="#phạm-vi-kiểm-thử" id="toc-phạm-vi-kiểm-thử">Phạm vi kiểm
+thử</a></li>
+<li><a href="#tiêu-chí-hoàn-thành" id="toc-tiêu-chí-hoàn-thành">Tiêu chí
+hoàn thành</a></li>
+<li><a href="#test-cases" id="toc-test-cases">Test cases</a></li>
+<li><a href="#kịch-bản-bdd-dùng-lại-cho-automation" id="toc-kịch-bản-bdd-dùng-lại-cho-automation">Kịch bản BDD (dùng lại cho
+automation)</a></li>
+<li><a href="#rủi-ro" id="toc-rủi-ro">Rủi ro</a></li>
+</ul>
+</nav>
+<h1 id="thông-tin-chung">Thông tin chung</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Hạng mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tài liệu tham chiếu</td>
+<td>SRS Module Thanh toán v1.2</td>
+</tr>
+<tr class="even">
+<td>Môi trường</td>
+<td>Staging – https://staging.shopnow.example</td>
+</tr>
+<tr class="odd">
+<td>Thời gian kiểm thử</td>
+<td>01/10/2026 – 10/10/2026</td>
+</tr>
+<tr class="even">
+<td>Người phụ trách</td>
+<td>Lê Chi (QC Lead)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="phạm-vi-kiểm-thử">Phạm vi kiểm thử</h1>
+<ul>
+<li>Kiểm thử chức năng UC-01, UC-02</li>
+<li>Kiểm thử quy tắc nghiệp vụ BR-01 đến BR-05</li>
+<li>Kiểm thử hiệu năng màn hình thanh toán (smoke)</li>
+</ul>
+<h1 id="tiêu-chí-hoàn-thành">Tiêu chí hoàn thành</h1>
+<ul>
+<li>100% test case mức <strong>Critical</strong> và
+<strong>High</strong> đạt (Pass)</li>
+<li>Không còn lỗi mức <strong>Blocker</strong>/<strong>Critical</strong>
+đang mở</li>
+<li>Tỷ lệ Pass tổng thể từ 95% trở lên</li>
+</ul>
+<h1 id="test-cases">Test cases</h1>
+<!-- Số dấu "-" ở dòng phân cách quyết định tỉ lệ độ rộng cột trong Word -->
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 21%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Tiêu đề</th>
+<th>Bước thực hiện</th>
+<th>Kết quả mong đợi</th>
+<th>Ưu tiên</th>
+<th>Tham chiếu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TC-001</td>
+<td>Thanh toán thành công bằng ví điện tử</td>
+<td>Chọn ví điện tử → xác nhận → nhập OTP hợp lệ</td>
+<td>Đơn hàng chuyển trạng thái <strong>Đã thanh toán</strong></td>
+<td>Critical</td>
+<td>UC-01</td>
+</tr>
+<tr class="even">
+<td>TC-002</td>
+<td>Đơn hàng dưới giá trị tối thiểu</td>
+<td>Tạo đơn 9.000 VNĐ → nhấn Thanh toán</td>
+<td>Hiển thị thông báo lỗi, không chuyển Gateway</td>
+<td>High</td>
+<td>BR-01</td>
+</tr>
+<tr class="odd">
+<td>TC-003</td>
+<td>Hết hạn phiên thanh toán</td>
+<td>Vào Gateway → chờ quá 15 phút</td>
+<td>Đơn hàng về trạng thái <strong>Chờ thanh toán</strong></td>
+<td>High</td>
+<td>BR-02</td>
+</tr>
+<tr class="even">
+<td>TC-004</td>
+<td>Thử lại quá 3 lần</td>
+<td>Thanh toán thất bại 3 lần liên tiếp → thử lần 4</td>
+<td>Nút Thanh toán bị vô hiệu hóa</td>
+<td>Medium</td>
+<td>BR-03</td>
+</tr>
+<tr class="odd">
+<td>TC-005</td>
+<td>Hoàn tiền vượt giá trị đã thanh toán</td>
+<td>Tạo refund 300.000 cho đơn 250.000</td>
+<td>Hệ thống từ chối, hiển thị lỗi</td>
+<td>Critical</td>
+<td>BR-05</td>
+</tr>
+</tbody>
+</table>
+<h1 id="kịch-bản-bdd-dùng-lại-cho-automation">Kịch bản BDD (dùng lại cho
+automation)</h1>
+<pre class="gherkin"><code>Feature: Thanh toán đơn hàng
+
+  Scenario: Thanh toán thành công bằng ví điện tử
+    Given khách hàng đã đăng nhập và có giỏ hàng trị giá 250.000 VNĐ
+    When khách hàng chọn &quot;Ví điện tử&quot; và nhập OTP hợp lệ
+    Then đơn hàng có trạng thái &quot;Đã thanh toán&quot;
+    And khách hàng nhận được hóa đơn điện tử trong vòng 5 phút</code></pre>
+<h1 id="rủi-ro">Rủi ro</h1>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 12%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rủi ro</th>
+<th>Ảnh hưởng</th>
+<th>Giải pháp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gateway sandbox không ổn định</td>
+<td>Cao</td>
+<td>Dùng mock server cho các case lỗi</td>
+</tr>
+<tr class="even">
+<td>Thiếu dữ liệu thẻ test quốc tế</td>
+<td>Trung bình</td>
+<td>Xin bộ thẻ test từ đối tác trước 30/09</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

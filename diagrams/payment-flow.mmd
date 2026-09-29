@@ -1,0 +1,11 @@
+sequenceDiagram
+    autonumber
+    actor KH as Khách hàng
+    participant App as ShopNow App
+    participant GW as Gateway
+    KH->>App: Nhấn "Thanh toán"
+    App->>GW: Tạo phiên thanh toán
+    GW-->>KH: Yêu cầu nhập OTP
+    KH->>GW: Nhập OTP
+    GW-->>App: Kết quả giao dịch
+    App-->>KH: Hiển thị trạng thái đơn hàng
